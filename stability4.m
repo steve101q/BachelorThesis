@@ -25,10 +25,6 @@ function simulate_Lagrange_point(mu, tspan, title_str, color, sign_y)
     % Plot trajectory
     plot(y(:,1), y(:,2), [color '-'], 'LineWidth', 1.5); hold on;
     plot(L_point(1), L_point(2), 'ko', 'MarkerSize', 8, 'MarkerFaceColor', 'k');
-
-    % Add primary bodies (place inside simulate_Lagrange_point)
-    plot(-mu, 0, 'yo', 'MarkerSize', 15, 'MarkerFaceColor', 'y'); % Primary 1 (e.g., Sun)
-    plot(1-mu, 0, 'mo', 'MarkerSize', 10, 'MarkerFaceColor', 'm'); % Primary 2 (e.g., Jupiter)
     
     title(title_str);
     grid on; axis equal;
